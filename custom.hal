@@ -1,2 +1,5 @@
 # Include your custom HAL commands here
 # This file will not be overwritten when you run PNCconf again
+
+#net spindle-at-speed motion.spindle-at-speed <= hm2_5i25.0.7i77.0.0.input-01
+
