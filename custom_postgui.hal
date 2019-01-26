@@ -1,2 +1,23 @@
-# Include your custom_postgui HAL commands here
-# This file will not be overwritten when you run PNCconf again
+# Include your customized HAL commands here
+
+# The commands in this file are run after the AXIS GUI (including PyVCP panel) starts
+
+# **** set up spindle at speed indicator ****
+
+net spindle-at-speed    	  => pyvcp.spindle-at-speed-led
+#net spindle-vel-fb-rpm-abs    	  => pyvcp.spindle-speed
+net pid_feedback         	  => pyvcp.pid_feedback
+net Pgainin                       <= pyvcp.Pgainin
+net Igainin                       <= pyvcp.Igainin
+net Dgainin                       <= pyvcp.Dgainin
+net MAXout                        <= pyvcp.MAXout
+#net pidError                      =>pid.s.error  pyvcp.pid_error
+
+net Pgainin => pid.s.Pgain
+
+net Igainin => pid.s.Igain
+
+net Dgainin => pid.s.Dgain
+
+net MAXout  => pid.s.maxoutput
+

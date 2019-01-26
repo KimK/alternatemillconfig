@@ -5,20 +5,21 @@
          <bd>6</bd>
                 <label>
                         <text>"Spindle Speed:"</text>
-                        <font>("Helvetica",20)</font>
+                        <font>("Helvetica",14)</font>
                 </label>
                 <bar>
                         <halpin>"spindle-speed"</halpin>
-                        <max_>3000</max_>
+                        <max_>2550</max_>
                 </bar>
                 <label>
                         <text>"Spindle-At-Speed:"</text>
-                        <font>("Helvetica",20)</font>
+                        <font>("Helvetica",14)</font>
                 </label>
+
                 <hbox>
                     <label>
                             <text>"             "</text>
-                            <font>("Helvetica",20)</font>
+                            <font>("Helvetica",14)</font>
                     </label>
                     <led>
                         <halpin>"spindle-at-speed-led"</halpin> 
@@ -27,5 +28,88 @@
                         <off_color>"red"</off_color>
                     </led>
                 </hbox>
+
+                <label>
+                        <text>"Spindle Velocity(RPS)"</text>
+                        <font>("Helvetica",14)</font>
+                </label>
+                <bar>
+                        <halpin>"spindle-velocity"</halpin>
+                        <max_>2550</max_>
+                </bar> 
+
+
+                <label>
+                        <text>"PID Feedback:"</text>
+                        <font>("Helvetica",14)</font>
+                </label>
+                <bar>
+                        <halpin>"pid_feedback"</halpin>
+                        <max_>2550</max_>
+                </bar> 
+
+                <label>
+                        <text>"PID Error:"</text>
+                        <font>("Helvetica",14)</font>
+                </label>
+                <bar>
+                        <halpin>"pid_error"</halpin>
+                        <max_>2550</max_>
+                </bar> 
+
+                <label>
+                        <text>"P Gain"</text>
+                        <font>("Helvetica",14)</font>
+                </label>
+			<spinbox>
+    				<halpin>"Pgainin"</halpin>
+   				<min_>0</min_>
+   				<max_>10</max_>
+   				<initval>0</initval>
+   				<resolution>0.001</resolution>
+    				<format>"2.3f"</format>
+    				<font>("Arial",20)</font>
+			</spinbox>
+                <label>
+                        <text>"I Gain"</text>
+                        <font>("Helvetica",14)</font>
+                </label>
+			<spinbox>
+    				<halpin>"Igainin"</halpin>
+   				<min_>0</min_>
+   				<max_>10</max_>
+   				<initval>0</initval>
+   				<resolution>0.001</resolution>
+    				<format>"2.3f"</format>
+    				<font>("Arial",20)</font>
+			</spinbox>
+                <label>
+                        <text>"D Gain"</text>
+                        <font>("Helvetica",14)</font>
+                </label>
+			<spinbox>
+    				<halpin>"Dgainin"</halpin>
+   				<min_>0</min_>
+   				<max_>10</max_>
+   				<initval>0</initval>
+   				<resolution>0.001</resolution>
+    				<format>"2.3f"</format>
+    				<font>("Arial",20)</font>
+			</spinbox>
+		<label>
+                        <text>"Max PID Output"</text>
+                        <font>("Helvetica",14)</font>
+                </label>
+			<spinbox>
+    				<halpin>"MAXout"</halpin>
+   				<min_>0</min_>
+   				<max_>1000</max_>
+   				<initval>0</initval>
+   				<resolution>1</resolution>
+    				<format>"4.0f"</format>
+    				<font>("Arial",20)</font>
+			</spinbox>
+  
+       
         </vbox>
 </pyvcp>
